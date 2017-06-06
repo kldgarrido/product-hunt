@@ -5,10 +5,17 @@
       <div class="products">
         <% @products.each do |product| %>
         <div class="product clearfix">
+          
           <div class="product-details">
             <span class="product-title"><%= link_to product.name, product %></span>
             <span class="product-description"><%= product.description %></span>
           </div>
+
+          <div class="product-comments">
+            <span class="glyphicon glyphicon-comment"></span>
+            <span class="comment-count"><%= product.comments.count %></span>
+          </div>
+
         </div>
         <% end %>
       </div>
