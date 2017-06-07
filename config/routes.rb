@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :products do
   	resources :comments, only: [:create]
+  	resource :vote, only: [:create, :destroy]
   end
   
 end
